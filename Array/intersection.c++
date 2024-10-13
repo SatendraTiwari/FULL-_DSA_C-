@@ -11,15 +11,15 @@ void interSection(int arr1[], int arr2[],int s1) {
             }
         }
     }
-
+    
 }
 
 int main(){
     int arr1[] = {1,2,34,5,6};
     int arr2[] = {1,2,76,87,6};
-
+    // arr1[] == arr2[] 
     int s1 = sizeof(arr1)/ sizeof(int);
-    
+
     interSection(arr1, arr2,s1);
     return 0;
 }
