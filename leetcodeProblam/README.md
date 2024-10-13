@@ -44,7 +44,7 @@ vector<int> pairSum(vector<int> nums, int target){
 }
 
 
-# problam 2 
+# problam 2  palindrome 
 
 Given an integer x, return true if x is a 
 palindrome
@@ -95,7 +95,7 @@ public:
 };
 
 
-# problam 3
+# problam 3 commanprefix
 
 Write a function to find the longest common prefix string amongst an array of strings.
 
@@ -149,7 +149,7 @@ string commanPrefix(vector<string>& strs){
 
  
 
-# problam 4 
+# problam 4  
 Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same. Then return the number of unique elements in nums.
 
 Consider the number of unique elements of nums to be k, to get accepted, you need to do the following things:
