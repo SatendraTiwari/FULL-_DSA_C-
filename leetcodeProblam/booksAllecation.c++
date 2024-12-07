@@ -3,55 +3,57 @@
 
 using namespace std;
 
-bool isVaild(vector<int> nums, int m, int n,int maxAllocationPage){
-    int student = 1, page = 0;
+bool isValid(vector<int> nums, int m, int n,int maxAllocationPage){
+    int stu = 1;
+    int pages = 0;
     for(int i = 0; i < n; i++){
-        if(nums[i] > maxAllocationPage){
-            return false;
-        }
-
-        if(page+nums[i] <= maxAllocationPage){
-            page += nums[i];
+        if(pages < maxAllocationPage){
+            pages += nums[i];
         }else{
-            student++;
-            page = nums[i];
+            stu++;
+            pages = nums[i];
         }
     }
 
-    return student > m ? false : true;
+    if(stu > m){
+        return false;
+    }
+    
+    return true;
 }
 
+
 int bookAllocation(vector<int> nums,int m,int n){
-    if(m > n)
-      return -1;
-
-    int sum = 0;
-    for(int i = 0; i < n; i++){
-        sum += nums[i];
+    if(m > n){
+        return -1;
     }
-    int st = 0, end = sum,ans;
+    int sum = 0;
 
-    while(st <= end){
-        int mid = st + (end - st)/2;
+    for(int val : nums){
+        sum += val;
+    }
 
-        if(isVaild(nums,m,n,mid)){ //vaild 
-           end = mid - 1;
-           ans = mid;
+    int min = 0 , max = sum,ans = -1;
+
+    while(min <= max){
+        int mid = min + (max -min)/2;
+        if(isValid(nums,m,n,mid)){
+            ans = mid;
+            max = mid -1;
         }else{
-            st = mid + 1;
+            min = mid +1 ;
         }
     }
 
-    cout<<ans;
     return ans;
 }
 
 int main(){
-    vector<int> nums = {2,1,3,4};
+    vector<int> nums = {9,6,4,2};
     int m = 2;
     int n = 4;
 
-    bookAllocation(nums,m,n);
+    cout<<bookAllocation(nums,m,n);
     
     return 0;
 }

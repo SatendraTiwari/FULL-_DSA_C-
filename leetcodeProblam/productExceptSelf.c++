@@ -28,6 +28,9 @@ int main()
 {
     vector<int> nums = {1,2,3,4};
     vector<int> re = productExceptSelf(nums);
+    for(int val: re){
+        cout<<val<<endl;
+    }
    
     return 0;
 }
