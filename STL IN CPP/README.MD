@@ -6,13 +6,13 @@
 ## CONTAINERS : ARRAY, VECTOR, PAIR, DEQUE
 
 
-Summary Table:
+```Summary Table:
 Feature	              |   Array  |	Vector
 Size	              |   Fixed  |	Dynamic
 Memory Management	  |   Manual |	Automatic (STL handles)
 Functionalities	      |   Basic  |  Rich in-built functions
 Performance	          |   Faster |	Slightly slower
-Library Dependency	  |   None	 |   Requires <vector>
+Library Dependency	  |   None	 |   Requires <vector>```
 
 ### ARRAY
 
